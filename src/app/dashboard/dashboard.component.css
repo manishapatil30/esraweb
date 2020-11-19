@@ -1,0 +1,94 @@
+.top
+{
+    position: absolute;
+    margin-top:40px;
+    width: 100%;
+}
+.logo
+{
+   padding-left: 10%;
+}
+.logo h3
+{
+    color:   #b4a39f;
+    /* font-size:30px; */
+    padding-top: 20px;
+    width: 400px;
+
+    
+}
+.responsive {
+    width: 100%;
+    height: auto;
+}
+#logo1
+{
+  position: relative;
+}
+#logo2
+{
+      position: absolute;
+      top: 1%;
+      left: 55%;
+}
+.responsive1
+{
+      width: 30%;
+      height: auto;
+}
+.container {
+    position: relative;
+    max-width: 100%; /* Maximum width */
+    width:100%;
+    padding:0px;
+    margin: 0px;
+  }
+  
+  .container .content {
+    margin-left: 8.5%;
+    position: absolute; /* Position the background text */
+    top: 15%; /* At the bottom. Use top:0 to append it to the top */
+    color: #fff; /* Grey text */
+    width: 100%; /* Full width */
+    padding: 20px; /* Some padding */
+  }
+  .content h4{
+     width: 35%;
+  }
+  .content p{
+      width: 35%;
+  }
+  .content .row
+  {
+      margin-left: 0.1%;
+  }
+  .content .row img{
+      padding-right: 15px;
+      margin-top: 10px;
+  }
+  .content .row button
+  {
+      margin-right: 20px;
+      display: block;
+      height:100%;
+  }
+  .btn1
+  {
+    background: black;
+    color:white;
+    width: 15%;
+    display: block;
+    height: 45px;
+  }
+  .btn1:focus
+  {
+    outline: none;
+    /* border: 1px solid red; */
+  }
+  @media screen and (min-width:800px)
+  {
+    .container #logo1
+    {
+        height: 100%;
+    }
+  }
