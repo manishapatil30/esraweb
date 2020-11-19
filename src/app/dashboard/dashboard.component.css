@@ -19,6 +19,11 @@
 }
 .responsive {
     width: 100%;
+    max-height:100%;
+    height: auto;
+}
+#logo2
+{
     height: auto;
 }
 #logo1
@@ -29,7 +34,7 @@
 {
       position: absolute;
       top: 1%;
-      left: 60%;
+      left: 62%;
 }
 .responsive1
 {
@@ -43,7 +48,7 @@
     padding:0px;
     margin: 0px;
   }
-  
+ 
   .container .content {
     margin-left: 8.5%;
     position: absolute; /* Position the background text */
@@ -85,10 +90,19 @@
     outline: none;
     /* border: 1px solid red; */
   }
-  @media screen and (min-width:800px)
+  @media screen and (max-width:600px)
+  {
+    .container .responsive
+    {
+        max-height: 100%;
+    }
+  }
+  @media screen and (min-width:1080px)
   {
     .container #logo1
     {
         height: 100%;
+        max-height: 100%;
     }
+  
   }
