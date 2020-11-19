@@ -29,7 +29,7 @@
 {
       position: absolute;
       top: 1%;
-      left: 55%;
+      left: 60%;
 }
 .responsive1
 {
@@ -49,7 +49,7 @@
     position: absolute; /* Position the background text */
     top: 15%; /* At the bottom. Use top:0 to append it to the top */
     color: #fff; /* Grey text */
-    width: 100%; /* Full width */
+    width: 90%;
     padding: 20px; /* Some padding */
   }
   .content h4{
