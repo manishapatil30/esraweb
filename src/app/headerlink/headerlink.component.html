@@ -8,38 +8,16 @@
                 <div class="topnav" id="myTopnav">
                     <a routerLinkActive="active" class="home-link" (click)="onHome()">Home</a>
                     <a routerLinkActive="active" [routerLink]="[]" class="about-link" (click)="onAbout()">About</a>
-                    <a routerLinkActive="active" [routerLink]="[]" class="download-link" (click)="onDownload()">Download</a>
-                    <a routerLinkActive="active" [routerLink]="[]" class="contact-link" (click)="onContact()">Contact us</a>
+                    <a routerLinkActive="active" [routerLink]="[]" class="download-link"
+                        (click)="onDownload()">Download</a>
+                    <a routerLinkActive="active" [routerLink]="[]" class="contact-link" (click)="onContact()">Contact
+                        us</a>
                     <a [routerLink]="[]" routerLinkActive="active" class="signup-link" (click)="onSignup()">Signup
                     </a>
                     <a [routerLink]="[]" routerLinkActive="active" class="login-link" (click)="onLogin()">Login
                     </a>
-                    <!-- <span (click)="myPopupbox()" class="user__details">
-                            <a *ngIf="Auth" [routerLink]="[]" data-backdrop="static" data-keyboard="false" id="left"
-                                >{{useremail}} <i class="fa fa-angle-down"
-                                ></i> 
-                               
-                                <span>
-                                        <a *ngIf="Auth" [routerLink]="[]">
-                                            <span>
-                                                <div class="popup">
-                                                  
-                                                    <span class="popuptext" id="myPopup">
-                                                        <a [routerLink]="['myaccount']" (click)="account()"><i
-                                                                class="fa fa-user active-link"
-                                                                style="margin-right: 10px;margin-left: 0;">&nbsp;Account</i></a>
-                                                        <a [routerLink]="[]" (click)="logout()"><i class="fa fa-power-off"
-                                                                style="margin-right: 10px;margin-left: 0;">&nbsp;Logout</i></a>
-                                                    </span>
-                                                </div>
-                                            </span>
-                                        </a>
-                                    </span>
-                            </a>
-                        </span>
-                  -->
-
-                    <a href="javascript:void(0);" class="icon" (click)="myFunction()">
+                  
+                    <a href="javascript:void(0);" class="icon float-right" (click)="myFunction()">
                         <i class="fa fa-bars"></i>
                     </a>
                 </div>

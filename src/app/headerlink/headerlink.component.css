@@ -1,19 +1,25 @@
 header
 {
     position: absolute;
+    /* position: fixed; */
     width: 100%;
     height: 40px;
     left: 0px;
     top: 0px;
     color: #cebdb9;
     background: #fff;
+    z-index: 1020;
 }
 .topnav {
     overflow: hidden;
     margin-top: 10px;
     z-index:1;
+    width: 100%;
+    
   }
-  
+  .topnav-right {
+    float: right;
+  }
   .topnav a {
     float: left;
     display: block;
@@ -31,7 +37,7 @@ header
     color: #cebdb9;
     cursor: pointer;
     border: 1px solid #cebdb9; 
-    border-radius: 10px;
+    border-radius: 20px;
   }
   
   /* .topnav a.active {
@@ -47,6 +53,10 @@ header
   }
   @media screen and (max-width: 600px) {
     /* .topnav a:not(:first-child) {display: none;} */
+    .col-sm-6
+    {
+      width: 100%;
+    }
     .topnav a {display: none;}
     .topnav a.icon {
       float: right;
@@ -64,7 +74,7 @@ header
   }
   
   @media screen and (max-width: 600px) {
-    .topnav.responsive {position: relative; margin-top: 113px;z-index: 1; height: 100%; }
+    .topnav.responsive {position: relative; margin-top: 40px;z-index: 1; height: 100%; width:100%;}
     .topnav.responsive .icon {
       /* margin-top: 43px; */
       /* margin-top: -20px; */
@@ -102,6 +112,11 @@ header
   }
   @media screen and (max-width: 800px) {
     /* .topnav a:not(:first-child) {display: none;} */
+    .col-sm-6
+    {
+      width: 100%;
+    }
+    .topnav.responsive {position: relative; margin-top: 40px;z-index: 1; height: 100%; width:100%;}
     .topnav a {display: none;}
     .topnav a.icon {
      
@@ -111,6 +126,7 @@ header
     .topnav #left
   {
     float:left;
+    width: 100%;
   }
   .topnav.responsive #left
   {
@@ -126,7 +142,7 @@ header
   @media screen and (max-width: 800px) {
     .topnav.responsive {
       position: relative; 
-      margin-top: 113px; 
+      margin-top: 40px; 
       z-index: 1;
     }
     .topnav.responsive .icon {

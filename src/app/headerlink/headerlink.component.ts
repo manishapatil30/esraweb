@@ -22,7 +22,7 @@ export class HeaderlinkComponent implements OnInit {
     }
   }
   public onHome() {
-    this.router.navigate(['home/homepage']);
+    this.router.navigate(['home/dashboard']);
 
     const home = document.querySelector('.home-link');
     const about = document.querySelector('.about-link');
@@ -147,7 +147,7 @@ export class HeaderlinkComponent implements OnInit {
   }
 
   public onLogin() {
-    this.router.navigate(['home/homepage']);
+    this.router.navigate(['home/login']);
 
     const home = document.querySelector('.home-link');
     const about = document.querySelector('.about-link');

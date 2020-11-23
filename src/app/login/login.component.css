@@ -1,0 +1,159 @@
+.top
+{
+   position: absolute;
+   margin-top: 40px;
+   width: 100%;
+}.logo
+{
+   padding-left: 10%;
+}
+.logo h3
+{
+    color:   #b4a39f;
+    /* font-size:30px; */
+    padding-top: 20px;
+    width: 400px;
+}
+.row
+{
+    margin-left: -30px;
+}
+.container {
+    position: relative;
+    max-width: 100%; /* Maximum width */
+    width:100%;
+    padding:0px;
+    margin: 0px;
+  }
+ 
+  .container .content {
+    /* margin-left: 8.5%; */
+    position: absolute; /* Position the background text */
+    top: 15%; /* At the bottom. Use top:0 to append it to the top */
+    color: #fff; /* Grey text */
+    width: 90%;
+    padding: 20px; /* Some padding */
+    margin: 150px auto;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+  }
+  .content .btn
+  {
+      border: 1px solid #fff;
+      border-radius: 20px;
+      color:#fff;
+      width: 130px;
+  }
+  .content .btn:focus
+  { 
+    outline:0 !important;
+     border: 1px solid #fff;
+     outline:none;
+  }
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 90%;
+    margin:auto;
+    
+  }
+  
+  .example-full-width {
+    width: 100%;
+    margin-top: 5px;
+  }
+  .example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+  
+  .example-right-align {
+    text-align: right;
+  }
+  
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+  
+  
+    ::ng-deep .mat-focused .mat-form-field-label {
+      color: gray !important;
+     }
+    
+     ::ng-deep.mat-form-field-underline:focus {
+      /*change color of underline*/
+      background-color: gray !important;
+    } 
+    
+    ::ng-deep.mat-form-field-ripple {
+     /*change color of underline when focused*/
+     background-color: gray !important;
+    }
+
+    .center
+    {
+      text-align: center;
+      justify-content: center;
+      justify-items: center;
+    }
+    .center button
+    {
+      background-color: #cab6b1;
+      color:#fff;
+      border-radius: 30px;
+      width:140px;
+      height: 40px;
+    }
+   
+   @media screen and (max-width:600px) {
+     .col-xs
+     {
+       width: 100%;
+     }
+     .col-sm
+     {
+       width: 100%;
+     }
+     .col-md
+     {
+       width: 100%;
+     }
+   }
+   @media screen and (max-width: 800px) {
+     .col-xs
+     {
+       width: 100%;
+     }
+     .col-sm
+     {
+       width: 100%;
+     }
+     .col-md
+     {
+       width: 100%;
+     }
+     .responsive
+     {
+       width: 100%;
+     }
+   }
+  
+
+   ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #cab6b1;
+}
+
+/* focused color */
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: #cab6b1;
+}
+
+/* floating label color */
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-label { 
+    color: #cab6b1; 
+}

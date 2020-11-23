@@ -1,1 +1,145 @@
-<p>login works!</p>
+<div class="top">
+    <div class="row col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="logo">
+                <img src="assets\Images\esradark.png" width="200" height="50">
+                <h3>FINDING BEAUTY MADE EASIER</h3>
+            </div>
+            <div class="container">
+                <img src="assets\Images\esrahalf.png" width="100%" height="700" class="responsive">
+                <div class="content">
+                    <button class="btn" (click)="procSubmit()" type="submit">{{letbutton}}</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="innerbox1" *ngIf="isShow">
+                <form class="example-form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+                    <h4 style="margin-top: 50px;">Login</h4>
+                    <p style="color: silver;">To get started</p>
+
+                    <mat-form-field class="example-full-width border-white" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Email id" formControlName="email" id="email" [(ngModel)]="email"
+                            type="text" required />
+                        <mat-error *ngIf="f.email.errors?.email && !f.email.errors?.required">
+                            Please enter a valid email address
+                        </mat-error>
+                        <mat-error *ngIf="f.email.errors?.required">
+                            Email is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Password" formControlName="password" [(ngModel)]="password"
+                            [type]="hide ? 'password' : 'text'" required />
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                            [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                        <mat-error *ngIf="!f.password.errors?.required && f.password.errors?.maxlength">
+                            Please, Enter 8 character Password.
+                        </mat-error>
+                        <mat-error *ngIf="f.password.errors?.required">
+                            Password is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <br><br><br>
+                    <div class="center">
+                        <button mat-raised-button color="dark" class="btn button-style" type="submit"
+                            [disabled]="!form.valid">Login</button>
+
+                    </div>
+                </form>
+            </div>
+            <div class="innerbox2" *ngIf="!isShow">
+                <form class="example-form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+                    <h4 style="margin-top: 30px;">Signup</h4>
+                    <p style="color: silver;">To get started</p>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Name</mat-label>
+                        <input matInput placeholder="Name" formControlName="name" [(ngModel)]="name" type="text"
+                            required />
+                        <mat-error *ngIf="f.name.errors?.required">
+                            Name is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width border-white" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Email id" formControlName="email" id="email" [(ngModel)]="email"
+                            type="text" required />
+                        <mat-error *ngIf="f.email.errors?.email && !f.email.errors?.required">
+                            Please enter a valid email address
+                        </mat-error>
+                        <mat-error *ngIf="f.email.errors?.required">
+                            Email is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Password" formControlName="password" [(ngModel)]="password"
+                            required />
+                        <!-- <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                            [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button> -->
+                        <mat-error *ngIf="!f.password.errors?.required && f.password.errors?.maxlength">
+                            Please, Enter 8 character Password.
+                        </mat-error>
+                        <mat-error *ngIf="f.password.errors?.required">
+                            Password is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Confirm Password</mat-label>
+                        <input matInput placeholder="Confirm Password" formControlName="confirmpassword"
+                            [(ngModel)]="confirmpassword" [type]="hide ? 'password' : 'text'" required />
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                            [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                        <mat-error *ngIf="!f.confirmpassword.errors?.required && f.confirmpassword.errors?.maxlength">
+                            Please, Enter 8 character Password.
+                        </mat-error>
+                        <mat-error *ngIf="f.confirmpassword.errors?.required">
+                            Password is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Contact Number</mat-label>
+                        <input matInput placeholder="Contact Number" numbersOnly formControlName="phoneNumber"
+                            [(ngModel)]="phoneNumber" type="text" required minlength="10" maxlength="10" />
+                        <mat-error
+                            *ngIf="f.phoneNumber.errors?.pattern && f.phoneNumber.errors?.maxlength && !f.phoneNumber.errors?.required">
+                            Please, Enter 10 digit Mobile Number.
+                        </mat-error>
+                        <mat-error *ngIf="f.phoneNumber.errors?.required">
+                            Contact Number is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Salon Name</mat-label>
+                        <input matInput placeholder="Salon Name" formControlName="salonname" [(ngModel)]="salonname"
+                            type="text" required />
+                        <mat-error *ngIf="f.salonname.errors?.required">
+                            Salon Name is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <br><br><br>
+                    <div class="center">
+                        <button mat-raised-button color="dark" class="btn button-style" type="submit"
+                            [disabled]="!form.valid">Sign up</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
