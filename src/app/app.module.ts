@@ -19,6 +19,17 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { StartpageComponent } from './startpage/startpage.component';
 
+import { MultiSelectAllModule } from '@syncfusion/ej2-angular-dropdowns';
+
+import { NumericTextBoxModule } from '@syncfusion/ej2-angular-inputs';
+
+import { CheckBoxModule, ButtonModule } from '@syncfusion/ej2-angular-buttons';
+
+import { RouterModule } from '@angular/router';
+import { MultiSelectModule } from '@syncfusion/ej2-angular-dropdowns';
+import { CommonModule } from '@angular/common';
+import {MatSelectModule} from '@angular/material/select';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +52,11 @@ import { StartpageComponent } from './startpage/startpage.component';
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    CommonModule,
+    RouterModule,
+    MultiSelectModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

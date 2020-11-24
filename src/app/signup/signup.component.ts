@@ -19,6 +19,7 @@ export class SignupComponent implements OnInit {
   salonname:any;
   hide = true;
   phoneNumber:any;
+  toppings = new FormControl();
   form: FormGroup = new FormGroup({});
   constructor(private router: Router, private fb: FormBuilder) {
     if (!this.isShow) {
@@ -61,7 +62,12 @@ export class SignupComponent implements OnInit {
   public submit() {
 
   }
+  toppingList: string[] = ['category 1', 'category 2', 'category 3', 'category 4', 'category 5'];
   get f() {
     return this.form.controls;
+  }
+  public onClose()
+  {
+    this.router.navigate(['home/dashboard']);
   }
 }

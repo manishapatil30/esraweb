@@ -63,4 +63,8 @@ export class LoginComponent implements OnInit {
   get f() {
     return this.form.controls;
   }
+  public onClose()
+  {
+    this.router.navigate(['home/dashboard']);
+  }
 }
