@@ -67,7 +67,7 @@
                     <form class="example-form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
                         <!-- <h4 style="margin-top: 20px;margin-bottom:30px;">Signup</h4> -->
                         <p style="color: silver;text-align:left;margin-top:20px;">To get started</p>
-                        <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label>Name</mat-label>
                             <input matInput placeholder="Name" formControlName="name" [(ngModel)]="name" type="text"
                                 required />
@@ -76,7 +76,7 @@
                             </mat-error>
                         </mat-form-field>
     
-                        <mat-form-field class="example-full-width border-white" appearance="fill">
+                        <mat-form-field class="example-full-width border-white" appearance="outline">
                             <mat-label>Email</mat-label>
                             <input matInput placeholder="Email id" formControlName="email" id="email" [(ngModel)]="email"
                                 type="text" required />
@@ -88,7 +88,7 @@
                             </mat-error>
                         </mat-form-field>
     
-                        <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label>Password</mat-label>
                             <input matInput placeholder="Password" formControlName="password" [(ngModel)]="password"
                                 required />
@@ -104,7 +104,7 @@
                             </mat-error>
                         </mat-form-field>
     
-                        <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label>Confirm Password</mat-label>
                             <input matInput placeholder="Confirm Password" formControlName="confirmpassword"
                                 [(ngModel)]="confirmpassword" [type]="hide ? 'password' : 'text'" required />
@@ -120,7 +120,7 @@
                             </mat-error>
                         </mat-form-field>
     
-                        <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label>Contact Number</mat-label>
                             <input matInput placeholder="Contact Number" numbersOnly formControlName="phoneNumber"
                                 [(ngModel)]="phoneNumber" type="text" required minlength="10" maxlength="10" />
@@ -134,7 +134,7 @@
                         </mat-form-field>
     
     
-                        <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label>Salon Name</mat-label>
                             <input matInput placeholder="Salon Name" formControlName="salonname" [(ngModel)]="salonname"
                                 type="text" required />
