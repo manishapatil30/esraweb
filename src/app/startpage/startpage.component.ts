@@ -14,5 +14,6 @@ export class StartpageComponent implements OnInit {
   }
   public onStarted() {
     this.router.navigate(['home/dashboard']);
+    window.scrollTo(0, 0);
   }
 }

@@ -8,9 +8,13 @@ import { Router } from '@angular/router';
 })
 export class HeaderlinkComponent implements OnInit {
   x: any;
-  constructor(private router: Router) { }
+  constructor(public router: Router) { }
 
   ngOnInit(): void {
+    this.onHome();
+    // this.router.navigate(['home/dashboard']);
+    // const home = document.querySelector('.home-link');
+    // home.classList.add('active-link');
   }
 
   public myFunction() {
@@ -122,7 +126,7 @@ export class HeaderlinkComponent implements OnInit {
   }
 
   public onSignup() {
-    this.router.navigate(['home/homepage']);
+    this.router.navigate(['home/signup']);
 
     const home = document.querySelector('.home-link');
     const about = document.querySelector('.about-link');

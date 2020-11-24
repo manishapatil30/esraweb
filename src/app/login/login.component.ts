@@ -21,10 +21,10 @@ export class LoginComponent implements OnInit {
   form: FormGroup = new FormGroup({});
   constructor(private router: Router, private fb: FormBuilder) {
     if (!this.isShow) {
-      this.letbutton = 'LOGIN';
+      this.letbutton = 'SIGNUP';
     }
     else {
-      this.letbutton = 'SIGNUP';
+      this.letbutton = 'LOGIN';
     }
     this.form = fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -49,11 +49,11 @@ export class LoginComponent implements OnInit {
   }
   public procSubmit() {
     if (!this.isShow) {
-      this.letbutton = 'SIGNUP';
+      this.letbutton = 'LOGIN';
       this.isShow = true;
     }
     else {
-      this.letbutton = 'LOGIN';
+      this.letbutton = 'SIGNUP';
       this.isShow = false;
     }
   }

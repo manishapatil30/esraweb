@@ -15,46 +15,6 @@
         <div class="col-xs-12 col-sm-6 col-md-6">
             <div class="innerbox1" *ngIf="isShow">
                 <form class="example-form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
-                    <h4 style="margin-top: 50px;">Login</h4>
-                    <p style="color: silver;">To get started</p>
-
-                    <mat-form-field class="example-full-width border-white" appearance="outline">
-                        <mat-label>Email</mat-label>
-                        <input matInput placeholder="Email id" formControlName="email" id="email" [(ngModel)]="email"
-                            type="text" required />
-                        <mat-error *ngIf="f.email.errors?.email && !f.email.errors?.required">
-                            Please enter a valid email address
-                        </mat-error>
-                        <mat-error *ngIf="f.email.errors?.required">
-                            Email is <strong>required</strong>
-                        </mat-error>
-                    </mat-form-field>
-
-                    <mat-form-field class="example-full-width" appearance="outline">
-                        <mat-label>Password</mat-label>
-                        <input matInput placeholder="Password" formControlName="password" [(ngModel)]="password"
-                            [type]="hide ? 'password' : 'text'" required />
-                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-                            [attr.aria-pressed]="hide">
-                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                        </button>
-                        <mat-error *ngIf="!f.password.errors?.required && f.password.errors?.maxlength">
-                            Please, Enter 8 character Password.
-                        </mat-error>
-                        <mat-error *ngIf="f.password.errors?.required">
-                            Password is <strong>required</strong>
-                        </mat-error>
-                    </mat-form-field>
-                    <br><br><br>
-                    <div class="center">
-                        <button mat-raised-button color="dark" class="btn button-style" type="submit"
-                            [disabled]="!form.valid">Login</button>
-
-                    </div>
-                </form>
-            </div>
-            <div class="innerbox2" *ngIf="!isShow">
-                <form class="example-form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
                     <h4 style="margin-top: 30px;">Signup</h4>
                     <p style="color: silver;">To get started</p>
                     <mat-form-field class="example-full-width" appearance="outline">
@@ -83,9 +43,9 @@
                         <input matInput placeholder="Password" formControlName="password" [(ngModel)]="password"
                             required />
                         <!-- <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-                            [attr.aria-pressed]="hide">
-                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                        </button> -->
+                                    [attr.aria-pressed]="hide">
+                                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button> -->
                         <mat-error *ngIf="!f.password.errors?.required && f.password.errors?.maxlength">
                             Please, Enter 8 character Password.
                         </mat-error>
@@ -139,6 +99,47 @@
 
                     </div>
                 </form>
+            </div>
+            <div class="innerbox2" *ngIf="!isShow">
+                <form class="example-form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+                    <h4 style="margin-top: 150px;text-align: center;">Login</h4>
+                    <p style="color: silver;text-align: center;">To get started</p>
+
+                    <mat-form-field class="example-full-width border-white" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Email id" formControlName="email" id="email" [(ngModel)]="email"
+                            type="text" required />
+                        <mat-error *ngIf="f.email.errors?.email && !f.email.errors?.required">
+                            Please enter a valid email address
+                        </mat-error>
+                        <mat-error *ngIf="f.email.errors?.required">
+                            Email is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Password" formControlName="password" [(ngModel)]="password"
+                            [type]="hide ? 'password' : 'text'" required />
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                            [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                        <mat-error *ngIf="!f.password.errors?.required && f.password.errors?.maxlength">
+                            Please, Enter 8 character Password.
+                        </mat-error>
+                        <mat-error *ngIf="f.password.errors?.required">
+                            Password is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <br><br><br>
+                    <div class="center">
+                        <button mat-raised-button color="dark" class="btn button-style" type="submit"
+                            [disabled]="!form.valid">Login</button>
+
+                    </div>
+                </form>
+
             </div>
         </div>
     </div>
