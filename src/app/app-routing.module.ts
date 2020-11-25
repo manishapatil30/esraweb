@@ -8,18 +8,24 @@ import { SignupComponent } from './signup/signup.component';
 import { StartpageComponent } from './startpage/startpage.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home/start', pathMatch: 'full' },
+  { path: '', redirectTo: '/home/dashboard', pathMatch: 'full' },
   {
     path: 'home', component: HomeComponent, children: [
-      { path: '', redirectTo: 'start', pathMatch: 'full' },
-      {
-        path: 'start', component: StartpageComponent
-      },
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       {
         path: 'dashboard', component: DashboardComponent
       },
+      {
+        path: 'about', component: StartpageComponent
+      },
       { path: 'login', component: LoginComponent },
-      { path: 'signup', component: SignupComponent }
+      { path: 'signup', component: SignupComponent },
+      // {
+      //   path: 'login', children: [
+      //     { path: '', component: LoginComponent },
+      //     { path: 'forgot', component: ForgotpassComponent }
+      //   ]
+      // },
     ]
   },
 ];

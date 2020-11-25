@@ -29,12 +29,13 @@
 #logo1
 {
   position: relative;
+  margin-top:2%;
 }
 #logo2
 {
       position: absolute;
-      top: 1%;
-      left: 62%;
+      top: -15%;
+      left: 57%;
 }
 .responsive1
 {
@@ -52,7 +53,7 @@
   .container .content {
     margin-left: 8.5%;
     position: absolute; /* Position the background text */
-    top: 15%; /* At the bottom. Use top:0 to append it to the top */
+    top: 18%; /* At the bottom. Use top:0 to append it to the top */
     color: #fff; /* Grey text */
     width: 90%;
     padding: 20px; /* Some padding */

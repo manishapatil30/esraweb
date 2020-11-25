@@ -51,7 +51,7 @@ export class HeaderlinkComponent implements OnInit {
   }
 
   public onAbout() {
-    this.router.navigate(['home/homepage']);
+    this.router.navigate(['home/about']);
 
     const home = document.querySelector('.home-link');
     const about = document.querySelector('.about-link');
