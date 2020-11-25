@@ -13,7 +13,7 @@ export class StartpageComponent implements OnInit {
   ngOnInit(): void {
   }
   public onStarted() {
-    this.router.navigate(['home/dashboard']);
+    this.router.navigate(['home/signup']);
     window.scrollTo(0, 0);
   }
 }
