@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
 export class StartpageComponent implements OnInit {
 
   constructor(private router: Router) { }
-
   ngOnInit(): void {
   }
   public onStarted() {

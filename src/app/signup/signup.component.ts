@@ -70,4 +70,8 @@ export class SignupComponent implements OnInit {
   {
     this.router.navigate(['home/dashboard']);
   }
+  public onHomepage()
+  {
+    this.router.navigate(['home/dashboard']);
+  }
 }

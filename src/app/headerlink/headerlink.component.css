@@ -30,11 +30,11 @@ header
     font-weight: 500;
     font-size: 16px;
     line-height: 27px;
-    color: #cebdb9;
+    color: #b4a39f;
   }
   
   .topnav a:hover {
-    color: #cebdb9;
+    color: #b4a39f;
     cursor: pointer;
     border: 1px solid #cebdb9; 
     border-radius: 20px;

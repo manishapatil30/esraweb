@@ -67,4 +67,8 @@ export class LoginComponent implements OnInit {
   {
     this.router.navigate(['home/dashboard']);
   }
+  public onHomepage()
+  {
+    this.router.navigate(['home/dashboard']);
+  }
 }
