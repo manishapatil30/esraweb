@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ControlContainer } from '@angular/forms';
 import { FormControl, FormGroupDirective, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -15,11 +16,13 @@ export class LoginComponent implements OnInit {
   email: any;
   password: any;
   confirmpassword: any;
-  salonname:any;
+  salonname: any;
   hide = true;
-  phoneNumber:any;
+  postData:any;
+  vendorID:any;
+  phoneNumber: any;
   form: FormGroup = new FormGroup({});
-  constructor(private router: Router, private fb: FormBuilder) {
+  constructor(private router: Router, private fb: FormBuilder, private http: HttpClient) {
     if (!this.isShow) {
       this.letbutton = 'SIGNUP';
     }
@@ -28,11 +31,8 @@ export class LoginComponent implements OnInit {
     }
     this.form = fb.group({
       email: ['', [Validators.required, Validators.email]],
-      name: ['', Validators.required],
-      phoneNumber: ['', [Validators.required, Validators.pattern('^[0-9 ]{10}$'), Validators.maxLength(10)]],
-      password: ['', [Validators.required, Validators.maxLength(8)]],
-      confirmpassword: ['', [Validators.required, Validators.maxLength(8)]],
-      salonname: ['', Validators.required],
+      password: ['', Validators.required],
+
     });
   }
   // constructor(private router: Router) {
@@ -58,17 +58,35 @@ export class LoginComponent implements OnInit {
     }
   }
   public submit() {
-
+    const body = {
+      EmailID: this.email,
+      Password: this.password,
+    };
+    this.http.post<any>('https://a1xlltmdgi.execute-api.ap-southeast-2.amazonaws.com/dev/adminuserlogin', body).subscribe((data => {
+      console.log(data);
+      this.postData=data.AdminUserID;
+      this.vendorID=data.VendorID;
+      if (data.Status === 1) {
+        localStorage.setItem('usersid', this.postData);
+        localStorage.setItem('vendorid', this.vendorID);
+        alert('Login Successfully.');
+        this.router.navigate(['home/details']);
+        // window.scrollTo(0, 0);
+      }
+      else {
+        alert('Error!please try again');
+      }
+    }), (error) => {
+      console.log(error);
+    });
   }
   get f() {
     return this.form.controls;
   }
-  public onClose()
-  {
+  public onClose() {
     this.router.navigate(['home/dashboard']);
   }
-  public onHomepage()
-  {
+  public onHomepage() {
     this.router.navigate(['home/dashboard']);
   }
 }

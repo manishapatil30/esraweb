@@ -1,0 +1,87 @@
+<div class="top">
+  <div class="row col-xs-12 col-sm-12 col-md-12">
+  <div class="col-xs-12 col-sm-10 col-md-10">
+            <div id="salonD" class="row">
+                <span style="float: left;width: 130px; height:120px; margin-top: 5px;">
+                    <img src="{{tableData.LogoURL}}" class="img-rounded" style="border-radius: 10px;" height="120" width="120">
+                </span>
+                <span style="width: 700px;">
+                    <a [routerLink]="">{{tableData.VendorName}}</a>
+                    <p>4.0&nbsp;<i class="fa fa-star" style="color:orange"></i><i class="fa fa-star"
+                            style="color:orange"></i><i class="fa fa-star" style="color:orange"></i><i
+                            class="fa fa-star" style="color:orange"></i> (60)</p>
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i>
+                        {{tableData.Address}}</p>
+                    <p>
+                        <li style="display: inline;" *ngFor="let atom of tableData.Categories; let isLast=last">
+                            {{atom}}{{isLast ? '' : ','}}
+                        </li>
+                    </p>
+                </span>
+            </div>
+            <div id="des" style="width:700px;">
+                <p>{{tableData.VendorDescription}}</p>
+                <p><span style="margin-left: 125px;"><span *ngFor="let image of tableData.Images">
+                            <img id="imgEffects" src="{{image}}" width="60" height="60" class="img-rounded"
+                                style="padding: 0 4px 4px 4px; border-radius: 10px;">
+                        </span></span>
+                </p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-2 col-md-2">
+            <div>
+                <button id="adds"><a [routerLink]="">
+                        Edit Profile</a></button>
+            </div>
+            <div>
+                <button id="adds"><a [routerLink]="" (click)="Calendar()">
+                        My Calendar</a></button>
+            </div>
+        </div>
+        <div class="row" id="head">
+            <nav class="navbar navbar-light">
+                <div>
+                    <h3 id="offhead">Offer Details</h3>
+                </div>
+            </nav>
+        </div>
+
+        <table width="98%" class="tableBodyScroll" style=" border-radius: 10px;">
+            <thead>
+                <th>Offer title</th>
+                <th>Description</th>
+                <th>From & To Date</th>
+                <th>From & To Time</th>
+                <th>Service Duration (mins)</th>
+                <th>Actual price</th>
+                <th>Offer price</th>
+                <th>Qty</th>
+                <th>Edit & Remove</th>
+            </thead>
+            <tbody align="center" class="example">
+                <tr *ngFor="let item of offerData" style="border-bottom: 2px solid #fdf0ee;">
+                    <td>{{item.OfferTitle}}</td>
+                    <td>{{item.Description}}</td>
+                    <td>{{formatDate(item.FromDateTime) | date:"MMM d, y"}}<br>To<br>{{formatDate(item.ToDateTime)  | date : "MMM d, y"}}
+                    </td>
+                    <td>{{item.FromTime}}<br>To<br>{{item.ToTime}}</td>
+                    <td>{{item.ServiceDuration}}</td>
+                    <td>{{item.ActualPrice | number:'1.2-2'}}&#36;</td>
+                    <td>{{item.OfferPrice | number:'1.2-2'}}&#36;</td>
+                    <td>{{item.Qty}}</td>
+                    <td>
+                        <!-- <a id="remEdit" [routerLink]="['edituser',item.OfferID]" 
+                            style="font-size: 20px;"><i class="fa fa-pencil"></i></a> -->
+                             <a id="remEdit" [routerLink]="[]" 
+                            style="font-size: 20px;"><i class="fa fa-pencil"></i></a>
+                        &nbsp;
+                        <a id="remEdit" [routerLink]="" (click)="postdata(item.OfferID)" style="font-size: 20px;"><i
+                                class="fa fa-trash"></i></a>
+                        <!-- <input id="btntest" type="submit" value="Delete" ng-click="postdata(item.OfferID);addOffer()"> -->
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+  </div>
+</div>

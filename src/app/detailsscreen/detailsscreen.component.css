@@ -1,0 +1,367 @@
+.top
+{
+   position: absolute;
+   /* margin-top: 10px; */
+   width: 100%;
+   padding-left:5px;
+}
+ #adds {
+            float: right;
+            background-color: white;
+            margin-right: 8px;
+            margin-top: 15px;
+            border-width: 1px;
+            outline: none;
+            border-color: #e19387;
+            border-radius: 5px;
+            color: #e19387;
+            font-size: 18px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: bold;
+            font-weight: bold;
+            padding: 2px 15px 2px 15px;
+        }
+
+        #adds a {
+            font-size: 18px;
+            color: #e19387;
+        }
+
+        #adds a:hover {
+            text-decoration: none;
+        }
+
+        #adds a:focus {
+            text-decoration: none;
+        }
+    #prof {
+            margin: 5px;
+            float: right;
+            padding-top: 15px;
+        }
+
+        #prof a {
+            color: #e19387;
+            font-size: 20px;
+
+        }
+
+        #prof a:hover {
+            text-decoration: none;
+            color: #e19387;
+        }
+
+        .popup {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* The actual popup */
+        .popup .popuptext {
+            visibility: hidden;
+            width: 120px;
+            height: 70px;
+            background-color: #e19387;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            top: 150%;
+            left: 50%;
+            margin-left: -60px;
+        }
+
+        /* Popup arrow */
+        .popup .popuptext::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #e19387 transparent;
+        }
+
+        /* Toggle this class - hide and show the popup */
+        .popup .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        #myPopup a {
+            color: white;
+            font-size: 15px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: regular;
+            font-weight: regular;
+            float: left;
+            margin-left: 10px;
+            margin-top: 5px;
+
+        }
+
+        #myPopup a:hover {
+            color: white;
+
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        #remEdit {
+            background-color: white;
+            color: #e19387;
+            border: none;
+            outline: none;
+            height: 30px;
+            width: 80px;
+            font-size: 20px;
+            margin-bottom: 10px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: bold;
+            font-weight: bold;
+            position: relative;
+            border-radius: 5px;
+
+        }
+
+        #remEdit:focus {
+            /* background-color: #fdf0ee; */
+            color: #fdf0ee;
+            outline: none;
+        }
+
+        input[type='submit'] {
+            background-color: #e19387;
+            color: white;
+            border: none;
+            outline: none;
+            height: 30px;
+            width: 80px;
+            font-size: 20px;
+            margin-bottom: 10px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: regular;
+            font-weight: regular;
+            position: relative;
+            border-radius: 5px;
+
+        }
+
+        input[type='submit']:focus {
+            background-color: #fdf0ee;
+        }
+
+        .tableBodyScroll tbody {
+            /* display: block; */
+            max-height: 500px;
+            overflow-y: scroll;
+
+        }
+
+        .tableBodyScroll thead,
+        tbody tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+
+        }
+
+        .tableBodyScroll::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        .tableBodyScroll {
+            -ms-overflow-style: none;
+        }
+
+        #frm {
+            margin-left: 10px;
+        }
+        #addsalon {
+            background-color: white;
+            margin-right: 8px;
+            margin-top: 18px;
+            margin-left: 90px;
+            border-width: 1px;
+            outline: none;
+            border-color: #e19387;
+            border-radius: 5px;
+            color: #e19387;
+            font-size: 18px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: bold;
+            font-weight: bold;
+            padding: 2px 15px 2px 15px;
+        }
+
+        #addsalon a {
+            font-size: 18px;
+            color: #e19387;
+        }
+
+        #addsalon a:hover {
+            text-decoration: none;
+        }
+
+        #addsalon a:focus {
+            text-decoration: none;
+        }
+         #salonD {
+            padding: 0 15px 5px 5px;
+            margin: 0;
+        }
+
+        #salonD a {
+            color: #e19387;
+            font-size: 20px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: bold;
+            font-weight: bold;
+            padding: 0;
+            margin: 0;
+        }
+
+        #salonD a:hover {
+            font-size: 20px;
+            color: #e19387;
+            text-decoration: none;
+        }
+
+        #salonD a:focus {
+            text-decoration: none;
+        }
+
+        #salonD p {
+            padding: 2px;
+            margin: 0;
+            font-size: 18px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: regular;
+            font-weight: regular;
+        }
+
+        #salonD li {
+            padding: 3px;
+            margin: 0;
+            font-size: 18px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: regular;
+            font-weight: regular;
+            list-style-type: none;
+        }
+
+        #des {
+            margin-left: 5px;
+        }
+
+        #des p {
+            padding: 2px;
+            margin: 0;
+            font-size: 18px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: regular;
+            font-weight: regular;
+        }
+
+
+
+        table {
+            margin-left: 15px;
+            margin-right: 10px;
+            margin-top: 0;
+            margin-bottom: 0;
+            /* table-layout: fixed; */
+            width: 98%;
+            border: 1px solid #fdf0ee;
+            border-bottom: 1px solid #fdf0ee;
+
+        }
+
+        thead {
+
+            background-color: #fdf0ee;
+        }
+
+        thead th {
+            padding: 10px 5px 10px 5px;
+            font-size: 20px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: bold;
+            font-weight: bold;
+
+        }
+
+        tbody {
+            font-size: 18px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: regular;
+            font-weight: regular;
+            height: 100%;
+
+        }
+
+        tbody tr {
+            padding: 5px 0 5px 0;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+
+            width: 120px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        td {
+            padding-bottom: 15px;
+            padding-top: 15px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        #offhead {
+            font-size: 23px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: bold;
+            font-weight: bold;
+            text-align: left;
+            margin-right: 690px;
+            margin-left: 15px;
+            margin-bottom: 10px;
+
+
+        }

@@ -1,0 +1,301 @@
+.top
+{
+   position: absolute;
+   /* margin-top: 10px; */
+   width: 100%;
+   padding-left:15px;
+}
+#offhead {
+            font-size: 25px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: bold;
+            font-weight: bold;
+            margin-left: 0;
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+
+
+        input[type='submit'] {
+            background-color: #e19387;
+            color: white;
+            border: none;
+            outline: none;
+            height: 37px;
+            width: 130px;
+            font-size: 20px;
+
+            /* font-family: Proxima Nova Alt; */
+            font-style: regular;
+            font-weight: regular;
+            position: relative;
+            border-radius: 5px;
+            margin-top: 25px;
+            margin-right: 35px;
+            margin-bottom: 15px;
+
+
+        }
+
+        input[type='submit']:focus {
+            background-color: #fdf0ee;
+        }
+
+        input[type='button'] {
+            background-color: white;
+            color: #e19387;
+            border: none;
+            outline: none;
+            height: 37px;
+            width: 130px;
+            font-size: 20px;
+
+            border: 1px solid #e19387;
+            /* font-family: Proxima Nova Alt; */
+            font-style: regular;
+            font-weight: regular;
+            position: relative;
+            border-radius: 5px;
+            margin-top: 25px;
+            margin-right: 50px;
+            margin-bottom: 15px;
+        }
+
+        input[type='button']:focus {
+            background-color: #fdf0ee;
+        }
+
+        #msg {
+            color: red;
+        }
+
+
+        .right {
+            background-color: white;
+            float: right;
+            width: 600px;
+            height: 100%;
+            margin-left: 15px;
+            padding: 20px;
+            border-radius: 15px;
+            /* border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px; */
+            border-right: none;
+
+        }
+
+        .left {
+            width: 50%;
+            margin-top: 60px;
+            margin-left: 60px;
+        }
+
+        /* input {
+            height: 30px;
+            font-size: 18px;
+           
+            font-style: normal;
+            font-weight: normal;
+
+        } */
+
+        input:focus {
+            outline: none;
+        }
+
+        /* textarea {
+            font-size: 18px;
+            width: 325px;
+            font-style: normal;
+            font-weight: normal;
+            border-radius: 5px;
+        }
+
+        textarea:focus {
+            outline: none;
+        } */
+
+        label {
+            margin: 0 0 3px;
+            font-size: 20px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: normal;
+            font-weight: normal;
+            color: #212529;
+            margin-top: 15px;
+        }
+
+        #adds {
+            background-color: #fdf0ee;
+            margin-right: 25px;
+            border-width: 1px;
+            outline: none;
+            border-color: #e19387;
+            border-radius: 5px;
+            color: #e19387;
+            font-size: 18px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: bold;
+            font-weight: bold;
+            padding: 2px 15px 2px 15px;
+            margin-left: 75px;
+            margin-top: 17px;
+
+
+        }
+
+        #adds a {
+            font-size: 18px;
+            color: #e19387;
+
+        }
+
+        #adds a:hover {
+            text-decoration: none;
+        }
+
+        #adds a:focus {
+            text-decoration: none;
+        }
+
+
+
+   .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 90%;
+    margin:auto;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    
+  }
+  
+  .example-full-width {
+    width: 100%;
+    margin-top: 5px;
+  }
+  .example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+  
+  .example-right-align {
+    text-align: right;
+  }
+  
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+  
+  
+    ::ng-deep .mat-focused .mat-form-field-label {
+      color: gray !important;
+     }
+    
+     ::ng-deep.mat-form-field-underline:focus {
+      /*change color of underline*/
+      background-color: gray !important;
+    } 
+    
+    ::ng-deep.mat-form-field-ripple {
+     /*change color of underline when focused*/
+     background-color: gray !important;
+    }
+
+    .center
+    {
+      text-align: center;
+      justify-content: center;
+      justify-items: center;
+    }
+    .center button
+    {
+      background-color: #cab6b1;
+      color:#fff;
+      border-radius: 30px;
+      width:140px;
+      height: 40px;
+    }
+   
+   @media screen and (max-width:600px) {
+     .col-xs
+     {
+       width: 100%;
+     }
+     .col-sm
+     {
+       width: 100%;
+     }
+     .col-md
+     {
+       width: 100%;
+     }
+      .top
+    {
+
+     padding-left:0;
+   } 
+    .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 90%;
+    margin:auto;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    
+  }
+   }
+   @media screen and (max-width: 800px) {
+     .col-xs
+     {
+       width: 100%;
+     }
+     .col-sm
+     {
+       width: 100%;
+     }
+     .col-md
+     {
+       width: 100%;
+     }
+    .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 90%;
+    margin:auto;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    
+  }
+  .top
+{
+
+   padding-left:0;
+}
+   }
+  
+
+   ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #cab6b1;
+}
+
+/* focused color */
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: #cab6b1;
+}
+
+/* floating label color */
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-label { 
+    color: #cab6b1; 
+}
+.example-additional-selection {
+  opacity: 0.75;
+  font-size: 0.75em;
+}

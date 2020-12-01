@@ -1,0 +1,12 @@
+.top
+{
+   position: absolute;
+   /* margin-top: 10px; */
+   width: 100%;
+   padding-left:5px;
+}
+ #calendar {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }

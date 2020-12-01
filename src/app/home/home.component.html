@@ -1,2 +1,3 @@
-<app-headerlink *ngIf="!router.url.includes('/home/start') && !router.url.includes('/home/signup') && !router.url.includes('/home/login')"></app-headerlink>
+<app-headerlink *ngIf="!router.url.includes('/home/start') && !router.url.includes('/home/signup') && !router.url.includes('/home/login') && !router.url.includes('/home/details') && !router.url.includes('/home/edituser') && !router.url.includes('/home/calendar')"></app-headerlink>
+<app-header *ngIf="!router.url.includes('/home/dashboard') && !router.url.includes('/home/start') && !router.url.includes('/home/signup') && !router.url.includes('/home/login')"></app-header>
 <app-contant></app-contant>

@@ -11,7 +11,7 @@ export class HeaderlinkComponent implements OnInit {
   constructor(public router: Router) { }
 
   ngOnInit(): void {
-    this.onHome();
+    // this.onHome();
     // this.router.navigate(['home/dashboard']);
     // const home = document.querySelector('.home-link');
     // home.classList.add('active-link');

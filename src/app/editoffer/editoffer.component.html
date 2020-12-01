@@ -1,0 +1,204 @@
+<div class="top">
+   <div class="row">
+<form class="example-form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+                        <!-- <h2 id="offhead">Edit Offer</h2> -->
+                        <p style="color: silver;text-align:left;margin-top:20px;font-size:20px;">Edit Offer</p>
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Offer Title</mat-label>
+                            <input matInput placeholder="Offer Title" formControlName="name" [(ngModel)]="name" type="text"
+                                required />
+                            <mat-error *ngIf="f.name.errors?.required">
+                                Offer Title is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+    
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Description</mat-label>
+                            <textarea  matInput placeholder="Description" formControlName="description" [(ngModel)]="description" type="text"
+                                required ></textarea>
+                            <mat-error *ngIf="f.description.errors?.required">
+                                Description is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width border-white" appearance="outline">
+                            <mat-label>Actual Price</mat-label>
+                            <input matInput placeholder="Actual Price" formControlName="aprice" [(ngModel)]="aprice"
+                                type="text" required />
+                            <mat-error *ngIf="f.aprice.errors?.required">
+                                Actual Price is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Offer Price</mat-label>
+                            <input matInput placeholder="Offer Price" formControlName="offerprice" [(ngModel)]="offerprice" type="text"
+                                required />
+                            <mat-error *ngIf="f.offerprice.errors?.required">
+                                Offer Price is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Offer Percentage</mat-label>
+                            <input matInput placeholder="Offer Percentage" formControlName="offper" [(ngModel)]="offper"
+                              required  />
+                
+                            <mat-error *ngIf="f.offper.errors?.required">
+                                Offer Percentage is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+    
+    
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Service Duration (mins)</mat-label>
+                            <input matInput placeholder="Service Duration (mins)" numbersOnly formControlName="serduration"
+                                [(ngModel)]="serduration" type="text" required minlength="10" maxlength="10" />
+                            
+                            <mat-error *ngIf="f.serduration.errors?.required">
+                                Service Duration (mins) is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+    
+                        <!-- <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Offer Valid From</mat-label>
+                            <input matInput placeholder="Offer Valid From" formControlName="fromdate" [(ngModel)]="fromdate"
+                                type="text" required />
+                            <mat-error *ngIf="f.fromdate.errors?.required">
+                                Offer Valid From is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Offer Valid Till</mat-label>
+                            <input matInput placeholder="Offer Valid Till" formControlName="todate" [(ngModel)]="todate" type="text"
+                                required />
+                            <mat-error *ngIf="f.todate.errors?.required">
+                               Offer Valid Till is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field> -->
+
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Enter Offer Valid From To Offer Valid Till</mat-label>
+                        <mat-date-range-input  [rangePicker]="picker">
+                        <input matStartDate formControlName="fromdate" [(ngModel)]="fromdate" placeholder="Start date">
+                        <input matEndDate formControlName="todate" [(ngModel)]="todate" placeholder="End date">
+                        </mat-date-range-input>
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-date-range-picker #picker></mat-date-range-picker>
+
+                        <mat-error *ngIf="f.fromdate.errors?.required">required start date</mat-error>
+                        <mat-error *ngIf="f.todate.errors?.required">required end date</mat-error>
+                        </mat-form-field>
+
+                        <!-- <p>Selected range: {{range.value | json}}</p> -->
+
+                       
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>From Time</mat-label>
+                                <input matInput [ngxTimepicker]="opnTime" [format]="24" formControlName="frmtime" [(ngModel)]="frmtime"  placeholder="From Time" required />
+                                 <mat-error *ngIf="f.frmtime.errors?.required">
+                                      From Time is <strong>required</strong>
+                                </mat-error>
+                        </mat-form-field>
+                        <ngx-material-timepicker #opnTime></ngx-material-timepicker>
+
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>To Time</mat-label>
+                                    <input matInput [ngxTimepicker]="cloTime" [format]="24" formControlName="totime" [(ngModel)]="totime"  placeholder="To Time" required />
+                                     <mat-error *ngIf="f.totime.errors?.required">
+                                         To Time is <strong>required</strong>
+                                    </mat-error>
+                        </mat-form-field>
+                        <ngx-material-timepicker #cloTime></ngx-material-timepicker>
+                        <br><br><br>
+                        <div class="center">
+                            <button mat-raised-button color="dark" class="btn button-style" type="submit"
+                                >Sign up</button>
+                                <!-- [disabled]="!form.valid" -->
+    
+                        </div>
+                    </form>
+            <!-- <span class="col-sm-3">
+            </span>
+            <span class="col-sm-6" style=" border-radius: 15px; border-right: none;">
+                <div class="right">
+                    <h2 id="offhead">Edit Offer</h2>
+                    <form >
+                        <div>
+                            <label>Offer Title</label><br>
+                            <textarea  id="title" ng-model="Title" style="width: 300px;"
+                                value="{{tableData.OfferTitle}}" required></textarea>
+                        </div>
+                        <div>
+                            <label style="margin-top: 8px;">Description</label><br>
+                            <textarea rows="3" style="width: 300px;" id="des" ng-model="description"
+                                value="{{tableData.Description}}" required></textarea>
+                        </div>
+                        <div>
+                            <label style="margin-top: 8px;">Actual Price</label><br>
+                            <input type="number" id="aprice" ng-model="Aprice" 
+                                value="{{tableData.ActualPrice}}" size="20" step="00000.00" min="0"
+                                title="Actual Price is greater than Offer Price" ng-click="dis()" required />
+                        </div>
+                        <div>
+                            <label>Offer Price</label><br>
+                            <input type="number" id="ofprice" ng-model="Ofprice" 
+                                value="{{tableData.OfferPrice}}" size="20" min="0" ng-click="dis()" required
+                                title="Offer Price must be less than Actual Price" />
+                        </div>
+                        <div>
+                            <label>Offer Percentage</label><br>
+                            <input type="text" id="per" ng-model="Percentage"
+                                ng-value="(100 - (Ofprice / Aprice) * 100).toFixed(2)" ng-click="dis()" readonly />
+                        </div>
+                        <div>
+                            <label>Service Duration (mins)</label><br>
+                            <input type="number" id="duration" ng-model="Duration" min="1" oninput="this.value = 
+                            !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null"
+                                value="{{tableData.ServiceDuration}}" size="20" required />
+                        </div>
+                        <div>
+                            <label>Offer Valid From</label><br>
+                            <div class='input-group date'>
+                                <input type="text" id="datetimepicker1" value="{{tableData.FromDateTime}}"
+                                    placeholder="mm/dd/yyyy" ng-model="FDate" style="width: 200px;" />
+                            </div>
+
+                        </div>
+                        <div>
+                            <label>Offer Valid Till</label><br>
+                            <div class='input-group date'>
+                                <input type="text" id="datetimepicker2" value="{{tableData.ToDateTime}}"
+                                    placeholder="mm/dd/yyyy" ng-model="Todate" style="width: 200px;" />
+                            </div>
+
+                        </div>
+                        <div>
+                            <label>From Time</label><br>
+                            <div class='input-group date'>
+                                <input type="text" id="timepicker1" value="{{tableData.FromTime}}"
+                                    placeholder="--:-- --" ng-model="Otime" style="width: 200px;" />
+                            </div>
+
+                        </div>
+                        <div>
+                            <label>To Time</label><br>
+                            <div class='input-group date'>
+                                <input type="text" id="timepicker2" value="{{tableData.ToTime}}"
+                                    placeholder="--:-- --" ng-model="Ctime" style="width: 200px;" />
+                            </div>
+
+                        </div>
+                        
+                        <a href=""><input id="log" type="submit"
+                                value="Submit" ng-click="postdata();vendDeatils()"></a>
+                        <a href=""><input id="log"
+                                type="button" value="Cancel"></a>
+                    </form>
+
+                </div>
+            </span>
+            <span class="col-sm-3"></span> -->
+        </div>
+</div>

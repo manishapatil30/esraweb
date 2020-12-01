@@ -6,6 +6,10 @@ import { HeaderlinkComponent } from './headerlink/headerlink.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { StartpageComponent } from './startpage/startpage.component';
+import { UserdetailsscreenComponent } from './userdetailsscreen/userdetailsscreen.component';
+import { DetailsscreenComponent } from './detailsscreen/detailsscreen.component';
+import { EditofferComponent } from './editoffer/editoffer.component';
+import { CalendorComponent } from './calendor/calendor.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home/dashboard', pathMatch: 'full' },
@@ -19,7 +23,15 @@ const routes: Routes = [
         path: 'about', component: StartpageComponent
       },
       { path: 'login', component: LoginComponent },
+      { path: 'details', children: [
+          { path: '', component: DetailsscreenComponent },
+          { path: 'edituser/:id', component: EditofferComponent },
+        ]
+      },
+      { path: 'calendar', component: CalendorComponent },
       { path: 'signup', component: SignupComponent },
+      { path: 'edituser', component: EditofferComponent },
+      { path: 'usdetail', component: UserdetailsscreenComponent },
       // {
       //   path: 'login', children: [
       //     { path: '', component: LoginComponent },

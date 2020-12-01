@@ -29,6 +29,20 @@ import { RouterModule } from '@angular/router';
 import { MultiSelectModule } from '@syncfusion/ej2-angular-dropdowns';
 import { CommonModule } from '@angular/common';
 import {MatSelectModule} from '@angular/material/select';
+import { HttpClientModule } from '@angular/common/http';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import {
+  NgxMatDatetimePickerModule,
+  NgxMatNativeDateModule,
+  NgxMatTimepickerModule
+} from '@angular-material-components/datetime-picker';
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import { UserdetailsscreenComponent } from './userdetailsscreen/userdetailsscreen.component';
+import { DetailsscreenComponent } from './detailsscreen/detailsscreen.component';
+import { HeaderComponent } from './header/header.component';
+import { EditofferComponent } from './editoffer/editoffer.component';
+import { CalendorComponent } from './calendor/calendor.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +53,12 @@ import {MatSelectModule} from '@angular/material/select';
     ContantComponent,
     LoginComponent,
     SignupComponent,
-    StartpageComponent
+    StartpageComponent,
+    UserdetailsscreenComponent,
+    DetailsscreenComponent,
+    HeaderComponent,
+    EditofferComponent,
+    CalendorComponent
   ],
   imports: [
     BrowserModule,
@@ -56,9 +75,16 @@ import {MatSelectModule} from '@angular/material/select';
     CommonModule,
     RouterModule,
     MultiSelectModule,
-    MatSelectModule
+    MatSelectModule,
+    HttpClientModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    NgxMatDatetimePickerModule,
+    NgxMatTimepickerModule,
+    NgxMatNativeDateModule,
+  NgxMaterialTimepickerModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
