@@ -1,0 +1,301 @@
+.top
+{
+   position: absolute;
+   /* margin-top: 10px; */
+   width: 100%;
+   padding-left:20px;
+}
+ #headD {
+            height: 55px;
+            width: 100%;
+            padding: 10px 0 10px 0;
+        }
+
+        #offhead {
+            font-size: 25px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: bold;
+            font-weight: bold;
+            margin-left: 0;
+            margin-top: 5px;
+        }
+
+        #box {
+            border: 2px solid #fdf0ee;
+            border-radius: 5px;
+            margin: 0 25px 0 0;
+        }
+
+        #box p {
+            margin: 0;
+            font-size: 20px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: regular;
+            font-weight: regular;
+            padding: 8px;
+            margin-left: 10px;
+        }
+
+        #box li {
+            padding-left: 3px;
+            padding-right: 3px;
+            font-size: 20px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: regular;
+            font-weight: regular;
+            list-style-type: none;
+            display: inline-block;
+        }
+
+        #adds {
+            background-color: #e19387;
+            border-width: 1px;
+            outline: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 20px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: regular;
+            font-weight: regular;
+            padding: 3px 35px 3px 35px;
+            float: right;
+        }
+
+        #adds:focus {
+            text-decoration: none;
+            background-color: #fdf0ee;
+            outline: none;
+        }
+
+        #adds a {
+            font-size: 20px;
+            color: white;
+            outline: none;
+        }
+
+        #adds a:hover {
+            text-decoration: none;
+            outline: none;
+        }
+
+        #adds a:focus {
+            text-decoration: none;
+
+        }
+
+input[type='submit'] {
+            background-color: #e19387;
+            color: white;
+            border: none;
+            outline: none;
+            height: 35px;
+            width: 120px;
+            font-size: 20px;
+            margin-bottom: 10px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: regular;
+            font-weight: regular;
+            position: relative;
+            border-radius: 5px;
+            float: right;
+
+        }
+
+        input[type='submit']:focus {
+            background-color: #fdf0ee;
+        }
+
+        input {
+            width: 300px;
+            height: 30px;
+            font-size: 18px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: normal;
+            font-weight: normal;
+            border-color: transparent;
+            border: 1px solid #e19387;
+            border-radius: 5px;
+        }
+
+        input:focus {
+            outline: none;
+
+        }
+
+        table {
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+            margin-bottom: 0;
+            table-layout: fixed;
+        }
+
+        tbody {
+            font-size: 18px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: regular;
+            font-weight: regular;
+            height: 100%;
+
+        }
+
+        tbody tr {
+            padding: 10px 0 10px 0;
+            margin-top: 10px;
+        }
+
+        td {
+
+            width: 120px;
+            overflow: hidden;
+
+        }
+
+        td {
+            padding-bottom: 10px;
+            padding-top: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        textarea {
+            border-color: transparent;
+            border: 1px solid #e19387;
+            font-size: 18px;
+            width: 300px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: normal;
+            font-weight: normal;
+            border-radius: 5px;
+        }
+
+        textarea:focus {
+            outline: none;
+        }
+
+        .input-group {
+            border-color: #e19387;
+            background-color: white;
+        }
+
+        #hide input[type=file] {
+            display: none;
+            margin: 10px;
+
+        }
+
+        #hide input[type=file]+label {
+            display: inline-block;
+            margin: 20px;
+            padding: 4px 32px;
+            background-color: #FFFFFF;
+            border: solid 1px #666F77;
+            border-radius: 6px;
+            color: #666F77;
+        }
+
+        #hide input[type=file]:active+label {
+            background-image: none;
+            background-color: #2D6C7A;
+            color: #FFFFFF;
+        }
+
+        #photoid {
+            padding: 3px;
+            border-radius: 7px;
+        }
+
+        #check {
+            display: inline-block;
+            margin: 0;
+            font-size: 10px;
+        }
+
+        input[type="checkbox"] {
+            height: 15px;
+            width: 20px;
+            display: inline-block;
+            color: black;
+        }
+
+        #check label {
+            margin: 0 0 3px;
+            font-size: 20px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: normal;
+            font-weight: normal;
+            color: #212529;
+            margin-top: 5px;
+        }
+
+        .hoverable {
+            position: relative;
+            display: block;
+            cursor: pointer;
+            height: 110px;
+            width: 110px;
+
+            border-radius: 5px;
+        }
+
+        .hoverable .hover-text {
+            position: absolute;
+            display: none;
+            top: 0;
+            left: 0;
+            transform: translate(0, 0);
+            z-index: 2;
+        }
+
+        .hoverable .background {
+            position: absolute;
+            display: none;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            pointer-events: none;
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .hoverable:hover .hover-text {
+            display: block;
+        }
+
+        .hoverable:hover .background {
+            display: block;
+        }
+
+        #fileInput {
+            display: none;
+        }
+        #addsalon {
+            background-color: white;
+            margin-right: 8px;
+            margin-top: 18px;
+            margin-left: 90px;
+            border-width: 1px;
+            outline: none;
+            border-color: #e19387;
+            border-radius: 5px;
+            color: #e19387;
+            font-size: 18px;
+            /* font-family: Proxima Nova Alt; */
+            font-style: bold;
+            font-weight: bold;
+            padding: 2px 15px 2px 15px;
+        }
+
+        #addsalon a {
+            font-size: 18px;
+            color: #e19387;
+        }
+
+        #addsalon a:hover {
+            text-decoration: none;
+        }
+
+        #addsalon a:focus {
+            text-decoration: none;
+        }

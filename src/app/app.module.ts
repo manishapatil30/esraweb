@@ -43,7 +43,15 @@ import { DetailsscreenComponent } from './detailsscreen/detailsscreen.component'
 import { HeaderComponent } from './header/header.component';
 import { EditofferComponent } from './editoffer/editoffer.component';
 import { CalendorComponent } from './calendor/calendor.component';
-
+import { EditsalonComponent } from './editsalon/editsalon.component';
+import { SavesalonComponent } from './savesalon/savesalon.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
+import { SaveprofileComponent } from './saveprofile/saveprofile.component';
+import { MatMomentDateModule, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
+import { Moment } from 'moment';
+import * as moment from 'moment';
+import { NumberDirective } from './validators/numbersOnly.directive';
+// import * as moment from 'moment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +66,11 @@ import { CalendorComponent } from './calendor/calendor.component';
     DetailsscreenComponent,
     HeaderComponent,
     EditofferComponent,
-    CalendorComponent
+    CalendorComponent,
+    EditsalonComponent,
+    SavesalonComponent,
+    UserprofileComponent,
+    SaveprofileComponent
   ],
   imports: [
     BrowserModule,
@@ -82,9 +94,16 @@ import { CalendorComponent } from './calendor/calendor.component';
     NgxMatDatetimePickerModule,
     NgxMatTimepickerModule,
     NgxMatNativeDateModule,
-  NgxMaterialTimepickerModule
+  NgxMaterialTimepickerModule,
+  
   ],
-  providers: [HttpClientModule],
+  exports: [
+    MatMomentDateModule,
+    // ...
+  ],
+  providers: [HttpClientModule,
+    { provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: { useUtc: true } }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

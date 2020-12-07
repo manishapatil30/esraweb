@@ -1,0 +1,86 @@
+<div class="top">
+<h2 id="offhead">Profile</h2>
+        <div id="salonD" class="col-xs-12 col-sm-12 col-md-12">
+            <div>
+                <label class="hoverable" for="fileInput">
+                        <ng-container *ngIf="isImageSaved; else elseTemplate">
+                            <img [src]="cardImageBase64" height="130" width="130" />
+                        </ng-container>
+                        <ng-template #elseTemplate>
+                             <img class="img-rounded" [hidden]="!tableData.ProfilePic" id="photo-id"
+                            src="{{tableData.ProfilePic}}" height="130" width="130" />
+                           <img class="img-rounded" [hidden]="tableData.ProfilePic" id="photo-id"
+                             src="assets\Images\avatar2.png" height="130" width="130" />
+                        </ng-template>
+                    <!-- <img class="img-rounded" [hidden]="!tableData.ProfilePic" id="photo-id"
+                        src="{{tableData.ProfilePic}}" height="130" width="130" />
+                    <img class="img-rounded" [hidden]="tableData.ProfilePic" id="photo-id"
+                        src="assets\Images\avatar2.png" height="130" width="130" /> -->
+
+
+                    <!-- <img src="Images/avatar2.png" id="photo-id" height="130" width="130"> -->
+                    <div class="hover-text"><img src="assets\Images\Group 1172.png" height="130" width="130">
+                    </div>
+                    <div class="background"></div>
+                </label>
+                <br />
+                <input id="fileInput" type='file' (change)="fileChangeEvent($event)">
+
+                <!-- <img ng-src="Images/avatar2.png" class="img-rounded" height="130" width="130"> -->
+            </div>
+        </div>
+        <div class="row col-xs-12 col-sm-12 col-md-12" id="headD">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <h3 id="offheadD">{{tableData.ContactNo}}</h3>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2">
+                <a [routerLink]="[]"><input type="submit" value="Save" (click)="putdata();putprofile()"></a>
+            </div>
+        </div>
+        <div id="box">
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="width: 110px;">Name</td>
+                        <td style="width:250px;text-align: left;">
+                            <input type="text" id="name" ng-model="Name" value="{{tableData.Name}}"
+                                style="border-color: #e19286;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Old Password</td>
+                        <td style="width: 200px;">
+                            <div class="input-group" style="width: 200px;">
+                                <input type="text" id="oldpass" ng-model="Oldpass"
+                                    
+                                    style="border-color: #e19286;">
+                                    <!-- ng-attr-type="{{ showPassword ? 'text':'password'}}" -->
+                                <!-- <span ng-click="toggleShowPassword()"
+                                    ng-class="{'fa fa-eye': showPassword,'fa fa-eye-slash': !showPassword}"
+                                    style=" color: black; cursor: pointer;background-color: white;border-color:#e19286 ; font-size: 15px; margin-left: 0;"
+                                    class="input-group-addon"></span> -->
+                            </div>
+                            <span id="msg"></span>
+                        </td>
+
+                        <!-- <td> <input type="password" id="oldpass" ng-model="Oldpass"></td> -->
+                    </tr>
+                    <tr>
+                        <td>New Password</td>
+                        <td style="width: 200px;">
+                            <div class="input-group" style="width: 200px;">
+                                <input type="text" id="pas" ng-model="Pass"
+                                   
+                                    style="border-color: #e19286;">
+                                     <!-- ng-attr-type="{{ showPassword2 ? 'text':'password'}}"
+                                <span ng-click="toggleShowPassword2()"
+                                    ng-class="{'fa fa-eye': showPassword2,'fa fa-eye-slash': !showPassword2}"
+                                    style=" color: black; cursor: pointer;background-color: white;border-color:#e19286 ; font-size: 15px; margin-left: 0;"
+                                    class="input-group-addon"></span> -->
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</div>

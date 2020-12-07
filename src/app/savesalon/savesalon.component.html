@@ -1,0 +1,109 @@
+<div class="top">
+<div style="float: left;width: 100%; height:120px; margin-top: 5px;">
+            <div>
+                <label class="hoverable" for="fileInput">
+                    <img src="{{tableData.LogoURL}}" class="img-rounded" style="border-radius: 10px;" id="photo-id" height="120"
+                        width="120">
+                    <!-- <div class="hover-text"><img src="Images/edit profile/Group 1172.png" height="120" width="120">
+                    </div> -->
+                    <div class="background"></div>
+                </label>
+                <br />
+                <!-- <input id="fileInput" type='file' onchange="angular.element(this).scope().newFile(this)"> -->
+
+              
+            </div>
+        </div>
+        <div class="row col-xs-12 col-sm-12 col-md-12" id="headD">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <h3 id="offhead">Details</h3>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2">
+                <a [routerLink]="[]"><input type="submit" value="Save" (click)="putdata()"></a>
+            </div>
+        </div>
+        <div id="box">
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="width: 150px;">Salon Name :</td>
+                        <td><textarea rows="2" id="name" ng-model="Name" value="{{tableData.VendorName}}"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 150px;">Password :</td>
+                        <td>
+                            <div class="input-group" style="width: 300px;">
+                                <input type="text" id="pass" ng-model="Password"
+                                    value="{{tableData.Password}}" readonly>
+                                <!-- <span ng-click="toggleShowPassword()"
+                                    ng-class="{'fa fa-eye': showPassword,'fa fa-eye-slash': !showPassword}"
+                                    style=" color: black; cursor: pointer;background-color: white;border-color:#e19286 ; font-size: 15px; margin-left: 0;"
+                                    class="input-group-addon"></span> -->
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 150px;">Email ID:</td>
+                        <td><input type="text" id="mail" ng-model="Mail" value="{{tableData.EmailID}}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 150px;">Website:</td>
+                        <td><input type="text" id="web" ng-model="Web" value="{{tableData.Website}}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 150px;">Address:</td>
+                        <td><textarea rows="2" id="address" ng-model="Address"
+                                value="{{tableData.Address}}"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 150px;">Discription :</td>
+                        <td><textarea rows="2" id="des" ng-model="Des"
+                                value="{{tableData.VendorDescription}}"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 150px;">Categories :</td>
+                        <td style="display: inline-block;width: 200px;">
+                            <li style="display: inline-block;" type="a"
+                                *ngFor="let item of tableData.Categories; let isLast=last">
+                                {{item}}{{isLast ? '' : ','}}</li>
+                        </td>
+                        <!-- <td style="width: 380px;">
+                            <div id="check" class="row" ng-repeat="album in serverResponse.Categories">
+                                <label class="checkbox-inline" style="margin-right: 15px;">
+                                    <input type="checkbox" class="messageCheckbox"
+                                        style="margin-right: 5px;margin-bottom: 15px;" value={{album.CategoryName}}
+                                        ng-model="album.selected">{{album.CategoryName}}
+                                </label>
+                            </div>
+                        </td> -->
+                    </tr>
+                    <tr>
+                        <td style="width: 150px;">Images :</td>
+                        <td>
+                            <span *ngFor="let image of tableData.Images">
+                                <img id="imgEffects" src="{{image}}" width="50" height="50" class="img-rounded"
+                                    style="padding: 3px; border-radius: 10px;">
+                            </span>
+                            <span> <img src="assets\Images\Group 1149.png" height="50" width="50"></span>
+                            <!-- <div id="hide">
+                                <label>
+                                    <input type="file" onchange="angular.element(this).scope().uploadFile(this)"
+                                        id="photoupload" multiple="multiple" ng-model="choose" nv-file-select
+                                        uploader="$ctrl.uploader" />
+                                    <span class="photo_text hidden-xs" id="lg" ng-click="display()"
+                                        style="display: inline;">
+                                        <span id="upimg">
+                                        </span>
+                                        <img src="Images/add  salon/Group 1149.png" height="50" width="50">
+                                    </span>
+                                </label>
+                            </div> -->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</div>

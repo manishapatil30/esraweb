@@ -10,6 +10,11 @@ import { UserdetailsscreenComponent } from './userdetailsscreen/userdetailsscree
 import { DetailsscreenComponent } from './detailsscreen/detailsscreen.component';
 import { EditofferComponent } from './editoffer/editoffer.component';
 import { CalendorComponent } from './calendor/calendor.component';
+import { EditsalonComponent } from './editsalon/editsalon.component';
+import { SavesalonComponent } from './savesalon/savesalon.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
+import { HeaderComponent } from './header/header.component';
+import { SaveprofileComponent } from './saveprofile/saveprofile.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home/dashboard', pathMatch: 'full' },
@@ -22,10 +27,27 @@ const routes: Routes = [
       {
         path: 'about', component: StartpageComponent
       },
+      {
+        path: 'header', component: HeaderComponent
+      },
+      // { path: 'userprofile/:vendorID', component: UserprofileComponent},
+      {
+        path : 'userprofile/:vendorID', children: [
+          { path: '', component: UserprofileComponent },
+          { path: 'saveprofile/:vendorID', component: SaveprofileComponent},
+        ]
+      },
       { path: 'login', component: LoginComponent },
       { path: 'details', children: [
           { path: '', component: DetailsscreenComponent },
           { path: 'edituser/:id', component: EditofferComponent },
+          { path: 'editsalon/:vendorID', component: EditsalonComponent },
+          {
+            path : 'editsalon/:vendorID', children: [
+              { path: '', component: EditsalonComponent },
+              { path: 'savesalon', component: SavesalonComponent},
+            ]
+          },
         ]
       },
       { path: 'calendar', component: CalendorComponent },

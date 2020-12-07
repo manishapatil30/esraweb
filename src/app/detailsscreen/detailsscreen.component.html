@@ -30,7 +30,7 @@
         </div>
         <div class="col-xs-12 col-sm-2 col-md-2">
             <div>
-                <button id="adds"><a [routerLink]="">
+                <button id="adds"><a [routerLink]="['editsalon',tableData.VendorID]">
                         Edit Profile</a></button>
             </div>
             <div>
@@ -72,7 +72,7 @@
                     <td>
                         <!-- <a id="remEdit" [routerLink]="['edituser',item.OfferID]" 
                             style="font-size: 20px;"><i class="fa fa-pencil"></i></a> -->
-                             <a id="remEdit" [routerLink]="[]" 
+                             <a id="remEdit" [routerLink]="['edituser',item.OfferID]" 
                             style="font-size: 20px;"><i class="fa fa-pencil"></i></a>
                         &nbsp;
                         <a id="remEdit" [routerLink]="" (click)="postdata(item.OfferID)" style="font-size: 20px;"><i

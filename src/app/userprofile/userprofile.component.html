@@ -1,0 +1,42 @@
+<div class="top">
+<h2 id="offhead">Profile</h2>
+        <div id="salonD" class="col-xs-12">
+           
+            <div style="float: left;width: 150px; height:130px;">
+
+                <img class="img-rounded" [hidden]="!tableData.ProfilePic"
+                    src="{{tableData.ProfilePic}}" height="130" width="130" />
+                <img class="img-rounded" [hidden]="tableData.ProfilePic" src="assets\Images\avatar2.png"
+                    height="130" width="130" />
+
+              
+            </div>
+        </div>
+        <div class="row col-xs-12 col-sm-12 col-md-12" id="headD">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <h3 id="offheadD">{{tableData.ContactNo}}</h3>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2">
+                <button id="adds" ><a [routerLink]="['saveprofile',tableData.VendorID]">
+                        Edit</a></button>
+            </div>
+        </div>
+        <div id="box">
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="width: 130px;">Name :</td>
+                        <td style="width:250px">
+                            <p>{{tableData.Name}}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 130px;">Password :</td>
+                        <td style="width:250px;">
+                            <p>{{tableData.Password}}</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</div>

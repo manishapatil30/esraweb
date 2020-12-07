@@ -27,7 +27,7 @@ popup:any;
   }
   public onHomepage()
   {
-    this.router.navigate(['home/dashboard']);
+    this.router.navigate(['home/details']);
   }
   public myFunction() {
       // var popup = document.getElementById("myPopup");
@@ -39,5 +39,9 @@ popup:any;
     this.router.navigate(['/home']);
     // window.location.reload();
     localStorage.clear();
+  }
+  public profile()
+  {
+    this.router.navigate(['/home/userprofile/' + this.VendorId]);
   }
 }
