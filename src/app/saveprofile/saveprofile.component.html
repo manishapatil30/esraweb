@@ -34,53 +34,43 @@
                 <h3 id="offheadD">{{tableData.ContactNo}}</h3>
             </div>
             <div class="col-xs-12 col-sm-2 col-md-2">
-                <a [routerLink]="[]"><input type="submit" value="Save" (click)="putdata();putprofile()"></a>
+                <button type="submit" form="myform" [routerLink]="[]" [disabled]="!form.valid">Save</button>
             </div>
         </div>
-        <div id="box">
-            <table>
-                <tbody>
-                    <tr>
-                        <td style="width: 110px;">Name</td>
-                        <td style="width:250px;text-align: left;">
-                            <input type="text" id="name" ng-model="Name" value="{{tableData.Name}}"
-                                style="border-color: #e19286;">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Old Password</td>
-                        <td style="width: 200px;">
-                            <div class="input-group" style="width: 200px;">
-                                <input type="text" id="oldpass" ng-model="Oldpass"
-                                    
-                                    style="border-color: #e19286;">
-                                    <!-- ng-attr-type="{{ showPassword ? 'text':'password'}}" -->
-                                <!-- <span ng-click="toggleShowPassword()"
-                                    ng-class="{'fa fa-eye': showPassword,'fa fa-eye-slash': !showPassword}"
-                                    style=" color: black; cursor: pointer;background-color: white;border-color:#e19286 ; font-size: 15px; margin-left: 0;"
-                                    class="input-group-addon"></span> -->
-                            </div>
-                            <span id="msg"></span>
-                        </td>
-
-                        <!-- <td> <input type="password" id="oldpass" ng-model="Oldpass"></td> -->
-                    </tr>
-                    <tr>
-                        <td>New Password</td>
-                        <td style="width: 200px;">
-                            <div class="input-group" style="width: 200px;">
-                                <input type="text" id="pas" ng-model="Pass"
-                                   
-                                    style="border-color: #e19286;">
-                                     <!-- ng-attr-type="{{ showPassword2 ? 'text':'password'}}"
-                                <span ng-click="toggleShowPassword2()"
-                                    ng-class="{'fa fa-eye': showPassword2,'fa fa-eye-slash': !showPassword2}"
-                                    style=" color: black; cursor: pointer;background-color: white;border-color:#e19286 ; font-size: 15px; margin-left: 0;"
-                                    class="input-group-addon"></span> -->
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div>
+                <form class="example-form" [formGroup]="form" (ngSubmit)="putdata()" id="myform" novalidate>
+                        <mat-form-field class="example-full-width" appearance="outline">
+                                <mat-label>Name</mat-label>
+                                <input matInput placeholder="Name" formControlName="name" [(ngModel)]="name" type="text"
+                                    required />
+                                <mat-error *ngIf="f.name.errors?.required">
+                                    Name is <strong>required</strong>
+                                </mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="example-full-width" appearance="outline">
+                                <mat-label>Old Password</mat-label>
+                                <input matInput placeholder="Old Password" type="password" formControlName="Oldpass" [(ngModel)]="Oldpass"
+                                    required  />
+                                <mat-error *ngIf="f.Oldpass.errors?.required">
+                                   Old Password is <strong>required</strong>
+                                </mat-error>
+                        </mat-form-field>
+                         <mat-form-field class="example-full-width" appearance="outline">
+                                <mat-label>New Password</mat-label>
+                                <input matInput placeholder="New Password" formControlName="password" [(ngModel)]="password"
+                                    required  [type]="hide ? 'password' : 'text'" />
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                                [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                                <mat-error *ngIf="!f.password.errors?.required && f.password.errors?.maxlength">
+                                    Please, Enter 8 character Password.
+                                </mat-error>
+                                <mat-error *ngIf="f.password.errors?.required">
+                                   New Password is <strong>required</strong>
+                                </mat-error>
+                        </mat-form-field>
+                </form>
+            
         </div>
 </div>

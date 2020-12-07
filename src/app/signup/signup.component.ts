@@ -34,7 +34,7 @@ export class SignupComponent implements OnInit {
   postData:any;
   vendorID:any;
   toppings = new FormControl();
-  form: FormGroup = new FormGroup({});
+  form: FormGroprivate fb: FormBuilderup = new FormGroup({});
   constructor(private router: Router, private fb: FormBuilder, private http: HttpClient) {
     if (!this.isShow) {
       this.letbutton = 'LOGIN';
