@@ -106,7 +106,7 @@ input[type='submit'] {
         }
 
         input {
-            width: 300px;
+            width: 350px;
             height: 30px;
             font-size: 18px;
             /* font-family: Proxima Nova Alt; */
@@ -162,7 +162,7 @@ input[type='submit'] {
             border-color: transparent;
             border: 1px solid #e19387;
             font-size: 18px;
-            width: 300px;
+            width: 350px;
             /* font-family: Proxima Nova Alt; */
             font-style: normal;
             font-weight: normal;

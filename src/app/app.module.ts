@@ -51,6 +51,7 @@ import { MatMomentDateModule, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/m
 import { Moment } from 'moment';
 import * as moment from 'moment';
 import { NumberDirective } from './validators/numbersOnly.directive';
+import { FooterComponent } from './footer/footer.component';
 // import * as moment from 'moment';
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { NumberDirective } from './validators/numbersOnly.directive';
     EditsalonComponent,
     SavesalonComponent,
     UserprofileComponent,
-    SaveprofileComponent
+    SaveprofileComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -33,7 +33,7 @@
                     <tr>
                         <td style="width: 150px;">Password :</td>
                         <td>
-                            <div class="input-group" style="width: 300px;">
+                            <div class="input-group" style="width: 350px;">
                                 <input type="text" id="pass" ng-model="Password"
                                     value="{{tableData.Password}}" readonly>
                                 <!-- <span ng-click="toggleShowPassword()"
@@ -55,17 +55,17 @@
                     </tr>
                     <tr>
                         <td style="width: 150px;">Address:</td>
-                        <td><textarea rows="2" id="address" ng-model="Address"
+                        <td><textarea rows="3" id="address" ng-model="Address"
                                 value="{{tableData.Address}}"></textarea></td>
                     </tr>
                     <tr>
                         <td style="width: 150px;">Discription :</td>
-                        <td><textarea rows="2" id="des" ng-model="Des"
+                        <td><textarea rows="3" id="des" ng-model="Des"
                                 value="{{tableData.VendorDescription}}"></textarea></td>
                     </tr>
                     <tr>
                         <td style="width: 150px;">Categories :</td>
-                        <td style="display: inline-block;width: 200px;">
+                        <td style="display: inline-block;width: 350px;">
                             <li style="display: inline-block;" type="a"
                                 *ngFor="let item of tableData.Categories; let isLast=last">
                                 {{item}}{{isLast ? '' : ','}}</li>

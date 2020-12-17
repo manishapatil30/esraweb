@@ -1,26 +1,31 @@
 <div class="row" id="head">
-            <div class="col-sm-9">
-                <h2 id="heading"><img src="assets\Images\esradark.png" width="130" height="30" (click)="onHomepage()" style="cursor:pointer;"></h2>
-            </div>
-            <div class="col-sm-3">
-                <div id="top">
-                    <div class="btn-group" id="prof">
-                        <img class="rounded-circle" width="35" height="35"
-                            [hidden]="!tableData.ProfilePic"
-                            src="{{tableData.ProfilePic}}"  style="margin-right:5px;"/>
-                        <img class="rounded-circle" width="35" height="35"
-                            [hidden]="tableData.ProfilePic" src="assets\Images\avatar2.png" />
-                        <div class="popup" (click)="myFunction()"><a [routerLink]="">
-                                <img src="assets\Images\arrow.png" width="14" height="9" style="margin-top: 5px;"></a>
-                            <span class="popuptext" id="myPopup">
-                                <li> <a [routerLink]="" (click)="profile()"><i
-                                            class="fa fa-user-o" style="margin-right: 10px;"></i>Profile</a></li>
-                                <br>
-                                <li><a [routerLink]="" (click)="logout()"><i class="fa fa-power-off"
-                                            style="margin-right: 10px;"></i>Logout</a></li>
-                            </span>
-                        </div>
-                    </div>
+    <div class="col-sm-9">
+        <h2 id="heading"><img src="assets\Images\esradark.png" width="130"
+                height="30" (click)="onHomepage()" style="cursor:pointer;"></h2>
+    </div>
+    <div class="col-sm-3">
+        <div id="top">
+            <div class="btn-group" id="prof">
+                <img class="rounded-circle" width="35" height="35"
+                    [hidden]="!tableData.ProfilePic"
+                    src="{{tableData.ProfilePic}}" style="margin-right:5px;" />
+                <img class="rounded-circle" width="35" height="35"
+                    [hidden]="tableData.ProfilePic"
+                    src="assets\Images\avatar2.png" />
+                <div class="popup" (click)="myFunction()"><a [routerLink]="">
+                        <img src="assets\Images\arrow.png" width="14" height="9"
+                            style="margin-top: 5px;"></a>
+                    <span class="popuptext" id="myPopup">
+                        <li> <a [routerLink]="" (click)="profile()"><i
+                                    class="fa fa-user-o" style="margin-right:
+                                    10px;"></i>Profile</a></li>
+                        <br>
+                        <li><a [routerLink]="" (click)="logout()"><i class="fa
+                                    fa-power-off"
+                                    style="margin-right: 10px;"></i>Logout</a></li>
+                    </span>
                 </div>
             </div>
         </div>
+    </div>
+</div>

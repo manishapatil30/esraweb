@@ -53,10 +53,11 @@ letter-spacing: 3px;
   .container .content {
     margin-left: 8.5%;
     position: absolute; /* Position the background text */
-    top: 18%; /* At the bottom. Use top:0 to append it to the top */
+    top: 18%;  /* At the bottom. Use top:0 to append it to the top */
     color: #fff; /* Grey text */
     width: 90%;
     padding: 20px; /* Some padding */
+    /* bottom:0; */
   }
   .content h4{
      width: 35%;

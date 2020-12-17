@@ -1,3 +1,4 @@
+import { AuthGuardService } from './auth-guard-services/auth-guard.service';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -15,7 +16,7 @@ import { SavesalonComponent } from './savesalon/savesalon.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { HeaderComponent } from './header/header.component';
 import { SaveprofileComponent } from './saveprofile/saveprofile.component';
-
+import { FooterComponent } from './footer/footer.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home/dashboard', pathMatch: 'full' },
   {
@@ -38,8 +39,8 @@ const routes: Routes = [
         ]
       },
       { path: 'login', component: LoginComponent },
-      { path: 'details', children: [
-          { path: '', component: DetailsscreenComponent },
+      { path: 'details',  children: [
+          { path: '', canActivate: [AuthGuardService], component: DetailsscreenComponent },
           { path: 'edituser/:id', component: EditofferComponent },
           { path: 'editsalon/:vendorID', component: EditsalonComponent },
           {
@@ -66,6 +67,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AuthGuardService]
 })
 export class AppRoutingModule { }
