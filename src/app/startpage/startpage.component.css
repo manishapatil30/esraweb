@@ -6,7 +6,7 @@
 }
 .logo
 {
-   width: 100%;
+   width:80%;
    /* margin-top:2%; */
 }
 .logo h2
@@ -42,7 +42,7 @@
     position: absolute; /* Position the background text */
     top: 5%; /* At the bottom. Use top:0 to append it to the top */
     color: #fff; /* Grey text */
-    width: 100%;
+    width: 90%;
     padding: 20px; /* Some padding */
   }
   .content h4{
