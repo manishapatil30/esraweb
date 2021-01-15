@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators, ControlContainer } from '@angular/f
 import { FormControl, FormGroupDirective, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-
+import { baseenvironment } from "../../app/config";
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -69,7 +69,7 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
     
- this.http.get<any>('https://a1xlltmdgi.execute-api.ap-southeast-2.amazonaws.com/dev/categories').subscribe(data => {
+ this.http.get<any>(baseenvironment.baseURL + '/categories').subscribe(data => {
           console.log(data);
           this.tableData=data.Categories;
           console.log(this.tableData);
@@ -105,7 +105,7 @@ export class SignupComponent implements OnInit {
       OpenTime:this.openTime,
       CloseTime:this.closeTime
     };
-    this.http.post<any>('https://a1xlltmdgi.execute-api.ap-southeast-2.amazonaws.com/dev/vendors', body).subscribe((data => {
+    this.http.post<any>(baseenvironment.baseURL + '/vendors', body).subscribe((data => {
       console.log(data);
        this.postData=data.EmailID;
       this.vendorID=data.VendorID;

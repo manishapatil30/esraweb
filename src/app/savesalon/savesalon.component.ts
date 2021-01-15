@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
-
+import { baseenvironment } from "../../app/config";
 @Component({
   selector: 'app-savesalon',
   templateUrl: './savesalon.component.html',
@@ -23,7 +23,7 @@ Name:any;
     this.VID = this.route.snapshot.params.vendorID;
      console.log( this.VID);
 
-      this.http.get<any>('https://a1xlltmdgi.execute-api.ap-southeast-2.amazonaws.com/dev/vendors?VendorID=' + this.VID ).subscribe(data => {
+      this.http.get<any>(baseenvironment.baseURL + '/vendors?VendorID=' + this.VID ).subscribe(data => {
         console.log(data);
         this.tableData = data.Vendors;
         console.log(this.tableData);
@@ -43,7 +43,7 @@ public putdata()
       EmailID: this.Mail,
       Website: this.Web,
     };
-    this.http.put<any>('https://a1xlltmdgi.execute-api.ap-southeast-2.amazonaws.com/dev/vendors/' + this.VID, body).subscribe((data => {
+    this.http.put<any>(baseenvironment.baseURL + '/vendors/' + this.VID, body).subscribe((data => {
       console.log(data);
       if (data.Status === 1) {
         

@@ -4,7 +4,9 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators, ControlContainer } from '@angular/forms';
 import { FormControl, FormGroupDirective, NgForm } from '@angular/forms';
-import { formatDate } from '@angular/common'
+import { formatDate } from '@angular/common';
+import { baseenvironment } from "../../app/config";
+
 
 @Component({
   selector: 'app-editoffer',
@@ -59,7 +61,7 @@ form: FormGroup = new FormGroup({});
      this.offerid = this.route.snapshot.params.id;
      console.log( this.offerid);
 
-     this.http.get<any>('https://a1xlltmdgi.execute-api.ap-southeast-2.amazonaws.com/dev/offers?OfferID=' + this.offerid ).subscribe(data => {
+     this.http.get<any>(baseenvironment.baseURL + '/offers?OfferID=' + this.offerid ).subscribe(data => {
         console.log(data);
         this.tableData = data.Offers;
         console.log(this.tableData);
@@ -100,7 +102,7 @@ public submit()
       ToTime: this.totime,
       FromTime: this.frmtime
   };
-  this.http.put<any>('https://a1xlltmdgi.execute-api.ap-southeast-2.amazonaws.com/dev/offers/'+ this.offerid, body).subscribe((data => {
+  this.http.put<any>(baseenvironment.baseURL + '/offers/'+ this.offerid, body).subscribe((data => {
     console.log(data);
     if (data.Status === 1) {
       alert('record update Successfully.');

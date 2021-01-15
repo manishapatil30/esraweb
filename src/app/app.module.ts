@@ -52,6 +52,8 @@ import { Moment } from 'moment';
 import * as moment from 'moment';
 import { NumberDirective } from './validators/numbersOnly.directive';
 import { FooterComponent } from './footer/footer.component';
+import { TermsanduseComponent } from './termsanduse/termsanduse.component';
+import { Headerlink1Component } from './headerlink1/headerlink1.component';
 // import * as moment from 'moment';
 @NgModule({
   declarations: [
@@ -72,7 +74,9 @@ import { FooterComponent } from './footer/footer.component';
     SavesalonComponent,
     UserprofileComponent,
     SaveprofileComponent,
-    FooterComponent
+    FooterComponent,
+    TermsanduseComponent,
+    Headerlink1Component
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@ import { FormControl, FormGroupDirective, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 // import { LoginService } from './login.service';
+import { baseenvironment } from "../../app/config";
 
 @Component({
   selector: 'app-login',
@@ -63,7 +64,7 @@ export class LoginComponent implements OnInit {
       EmailID: this.email,
       Password: this.password,
     };
-    this.http.post<any>('https://a1xlltmdgi.execute-api.ap-southeast-2.amazonaws.com/dev/adminuserlogin', body).subscribe((data => {
+    this.http.post<any>(baseenvironment.baseURL + '/adminuserlogin', body).subscribe((data => {
       console.log(data);
       this.postData=data.AdminUserID;
       this.vendorID=data.VendorID;

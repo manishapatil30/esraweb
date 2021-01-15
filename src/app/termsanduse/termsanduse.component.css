@@ -1,0 +1,29 @@
+.top
+{
+    position: absolute;
+    /* margin-top:40px; */
+    width: 100%;
+}
+.term
+{
+    margin-top:40px;
+    padding-top:30px;
+    width: 90%;
+    margin: auto;
+}
+/* ol li
+{
+    font-size: 22px;
+} */
+/* li p
+{
+    font-size:18px;
+} */
+h5
+{
+    margin-top: 10px;
+}
+ol[type='i']
+{
+    color: dimgrey;
+}

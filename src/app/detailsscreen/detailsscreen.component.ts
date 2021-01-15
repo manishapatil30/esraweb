@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { baseenvironment } from "../../app/config";
 
 @Component({
   selector: 'app-detailsscreen',
@@ -24,13 +25,13 @@ export class DetailsscreenComponent implements OnInit {
   ngOnInit(): void {
     
 
-    this.http.get<any>('https://a1xlltmdgi.execute-api.ap-southeast-2.amazonaws.com/dev/vendors?VendorID=' + this.VendorId ).subscribe(data => {
+    this.http.get<any>(baseenvironment.baseURL + '/vendors?VendorID=' + this.VendorId ).subscribe(data => {
         console.log(data);
         this.tableData = data.Vendors;
         console.log(this.tableData);
     })
 
-    this.http.get<any>('https://a1xlltmdgi.execute-api.ap-southeast-2.amazonaws.com/dev/offers?VendorID=' + this.VendorId ).subscribe(data => {
+    this.http.get<any>(baseenvironment.baseURL + '/offers?VendorID=' + this.VendorId ).subscribe(data => {
       console.log(data);
       this.offerData = data.Offers;
       console.log(this.offerData);
@@ -43,7 +44,7 @@ export class DetailsscreenComponent implements OnInit {
   public postdata(OfferID) {
       if (confirm("Do you want to Delete This Offer?")) {
 
-        this.http.delete<any>('https://a1xlltmdgi.execute-api.ap-southeast-2.amazonaws.com/dev/offers/' + OfferID ).subscribe(data => {
+        this.http.delete<any>(baseenvironment.baseURL + '/offers/' + OfferID ).subscribe(data => {
           console.log(data);
           if(data.Status===1)
           {

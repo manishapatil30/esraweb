@@ -15,4 +15,5 @@ export class StartpageComponent implements OnInit {
     this.router.navigate(['home/signup']);
     window.scrollTo(0, 0);
   }
+  
 }

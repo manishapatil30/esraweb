@@ -17,6 +17,7 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
 import { HeaderComponent } from './header/header.component';
 import { SaveprofileComponent } from './saveprofile/saveprofile.component';
 import { FooterComponent } from './footer/footer.component';
+import { TermsanduseComponent } from './termsanduse/termsanduse.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home/dashboard', pathMatch: 'full' },
   {
@@ -52,6 +53,7 @@ const routes: Routes = [
         ]
       },
       { path: 'calendar', component: CalendorComponent },
+      { path: 'terms', component: TermsanduseComponent },
       { path: 'signup', component: SignupComponent },
       { path: 'edituser', component: EditofferComponent },
       { path: 'usdetail', component: UserdetailsscreenComponent },

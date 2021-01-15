@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, ControlContainer } from '@angular/forms';
 import { FormControl, FormGroupDirective, NgForm } from '@angular/forms';
-
+import { baseenvironment } from "../../app/config";
 import * as _ from 'lodash';
 // import * as moment from 'moment';
 @Component({
@@ -40,7 +40,7 @@ export class SaveprofileComponent implements OnInit {
     this.VID = this.route.snapshot.params.vendorID;
     console.log(this.VID);
 
-    this.http.get<any>('https://a1xlltmdgi.execute-api.ap-southeast-2.amazonaws.com/dev/vendors?VendorID=' + this.VID).subscribe(data => {
+    this.http.get<any>(baseenvironment.baseURL + '/vendors?VendorID=' + this.VID).subscribe(data => {
       console.log(data);
       this.tableData = data.Vendors;
       console.log(this.tableData);
@@ -55,7 +55,7 @@ export class SaveprofileComponent implements OnInit {
       Password: this.password,
       ProfilePic: this.baseimage
     };
-    this.http.put<any>('https://a1xlltmdgi.execute-api.ap-southeast-2.amazonaws.com/dev/adminusers/' + this.UserID, body).subscribe((data => {
+    this.http.put<any>(baseenvironment.baseURL + '/adminusers/' + this.UserID, body).subscribe((data => {
       console.log(data);
       if (data.Status === 1) {
         this.router.navigate(['home/details']);

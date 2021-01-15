@@ -1,4 +1,4 @@
-footer
+/* footer
 {
     background-color: black;
     color: white;
@@ -14,3 +14,75 @@ p
 {
     padding:50px 0px 30px 50px;
 }
+div.vertical-line{
+    margin-top: 40px;
+    color: silver;
+    width: 0.1px;
+    background: silver; 
+    height: 100%; 
+    float: left;
+  } */
+  .footer_bg {
+    background: black;
+    /* background: #25262A; */
+    padding: 3rem 2rem 1.5rem 2rem;
+}
+
+.footer_title {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer_one p , .footer_two p, .footer_three p {
+    /* color: #b2beb5; */
+    line-height:15px;
+    color:silver;
+} 
+.footer_two p, .footer_three p {
+    cursor: pointer;
+} 
+
+.footer_two p:hover, .footer_three p:hover {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width:767px) {
+    .footer_two , .footer_three {
+        margin-top: 2rem;
+    }
+
+    .footer_title {
+        font-size: 1.2rem;
+    }
+
+    .footer_one p , .footer_two p, .footer_three p {
+        font-size: 0.9rem;
+    } 
+}
+
+
+div.vertical-line{
+    margin-top: 40px;
+    color: silver;
+    width: 0.1px;
+    background: silver; 
+    height: 100%; 
+    float: left;
+  }
+
+  @media screen and (max-width:767px) {
+    div.vertical-line {
+        display: none;
+    }
+  }
+  .test_view_more_btn {
+    margin: 3rem 0 1rem 0;
+    background: #25262A;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    letter-spacing: 2px;
+  }

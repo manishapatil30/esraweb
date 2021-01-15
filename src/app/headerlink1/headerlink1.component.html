@@ -1,0 +1,38 @@
+
+<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white">
+    <a class="navbar-brand" (click)="onHome();$event.stoppropagation">
+
+    </a>
+    <button class="navbar-toggler btn-white collapsed" type="button"
+        data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fa fa-bars text-black"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item active"
+                (click)="onHome();$event.stoppropagation">
+                <a class="nav-link ml-3" routerLink="dashboard"
+                    routerLinkActive="active_yellow">Home</a>
+            </li>
+            <li class="nav-item active"
+                (click)="onAbout();$event.stoppropagation">
+                <a class="nav-link ml-3" routerLink="about"
+                    routerLinkActive="active_yellow">I am a business</a>
+            </li>
+            <li class="nav-item active"
+                (click)="onSignup();$event.stoppropagation">
+                <a class="nav-link ml-3" routerLink="signup"
+                    routerLinkActive="active_yellow">Signup</a>
+            </li>
+            <li class="nav-item active"
+                (click)="onLogin();$event.stoppropagation">
+                <a class="nav-link ml-3" routerLink="login"
+                    routerLinkActive="active_yellow">Login</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
