@@ -15,5 +15,10 @@ export class FooterComponent implements OnInit {
     this.router.navigate(['/home/terms']);
     window.scrollTo(0, 0);
   }
+  public privacy()
+  {
+    this.router.navigate(['/home/privacy']);
+    window.scrollTo(0, 0);
+  }
 
 }

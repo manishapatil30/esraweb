@@ -1,0 +1,17 @@
+.top
+{
+    position: absolute;
+    /* margin-top:40px; */
+    width: 100%;
+}
+.term
+{
+    margin-top:40px;
+    padding-top:30px;
+    width: 90%;
+    margin: auto;
+}
+p
+{
+    font-size:16px;
+}
